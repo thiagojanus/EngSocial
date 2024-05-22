@@ -11,6 +11,10 @@ body {
     max-width: 600px;
     margin: 0 auto;
   }
+
+  html{
+    scroll-behavior: smooth;
+  }
  
   p {
     line-height: 1.5;

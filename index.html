@@ -4,46 +4,169 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-  <title>Simulação de Ataque de Engenharia Social</title>
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-26PCE1FQ02"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <title>Job Finder - Emprego dos Sonhos</title>
+  
+  <style>
+    /* Estilização Geral */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
 
-  gtag('config', 'G-26PCE1FQ02');
-</script>
-<body>
-    <div class="container">
-        <div class="alert alert-danger" role="alert">
-            <i class="bi bi-exclamation-circle-fill"  style="font-size: 30px; "> Alerta de Segurança Digital</i> 
-        </div>
-      <p>Você acaba de clicar em um link suspeito em um e-mail falso que se passava por uma instituição financeira ou serviço online popular.</p>
-      <p>Felizmente, este não é um site real, mas sim uma simulação para educá-lo sobre os riscos de clicar em links maliciosos.</p>
-      <p>Os hackers utilizam técnicas de engenharia social para enganar as pessoas e fazer com que elas cliquem em links que podem comprometer sua segurança digital.</p>
-      <p>Fique atento a e-mails, mensagens e links suspeitos. Sempre verifique a origem e a legitimidade antes de clicar em qualquer link.</p>
-      <button class="button" onclick="closeWindow()">Entendi, obrigado pela informação!</button>
-      <button class="button" onclick="location.href='ip.html'">Veja suas informações</button>
-    </div>  
-    <br>
-    <br>
+    a {
+      text-decoration: none;
+      color: #3498db;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #cfdae2;
+    }
+
+    h2,h3,p{
+      font-family: 'Poppins', sans-serif;
+    }
+
+
+
     
-    <!--
-    <div class="container">
-       <div class="info-box">
-        <h2>Suas informações</h2>
-        <p>IP Address: <span id="ip-address"></span></p>
-        <p>ISP: <span id="isp"></span></p>
-        <p>País: <span id="country"></span></p>
-        <p>Região: <span id="region"></span></p>
-        <p>Cidade: <span id="city"></span></p>
-      </div> -->
-    <script src="script.js"></script>
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  nav ul li{
+      display: inline-block;
+  }
+  
+  nav ul li a{
+      padding: 10px 20px ;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 1em;
+      transition: 0.6s;
+      color: white;
+  }
+  
+  nav ul li a:hover{
+      background-color: #cccccc8a;
+  }
+  
+  .menu2{
+    position: absolute;
+    left: 55%;
+    width: 70%;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .menu {
+      position: absolute;
+      left: 65%;
+      width: 70%;
+      font-family: 'Montserrat', sans-serif;
+  }
+
+    /* Seção Hero */
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1551836022-d5d88e48d8e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'); /* Substitua pela URL da sua imagem */
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding: 5rem 0;
+      color: #1f1515;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta {
+      display: inline-block;
+      background-color: #2ecc71;
+      color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta:hover {
+      background-color: #27ae60;
+    }
+
+    /* Seção Vagas em Destaque */
+    .featured-jobs {
+      padding: 3rem;
+    }
+
+    .job-listing {
+      background-color: #fff;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .job-listing h3 {
+      margin-bottom: 1rem;
+    }
+
+    .apply-btn {
+      display: inline-block;
+      background-color: #3498db;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      font-family: 'Poppins', sans-serif;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .apply-btn:hover {
+      background-color: #2980b9;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+  
+
+  <main>
+    <section class="hero">
+      <h2>Encontre o Emprego dos Sonhos Aqui!</h2>
+      <p>Milhares de oportunidades com os melhores salários e benefícios.</p>
+      <a href="site2.html" class="cta">Candidatar-se Agora</a>
+    </section>
+
+    <section class="featured-jobs">
+      <h2>Vagas em Destaque</h2>
+      <div class="job-listing">
+        <h3>Gerente de Vendas</h3>
+        <p>Salário: R$ 15.000/mês</p>
+        <p>Benefícios: Plano de Saúde, Vale-Refeição, Seguro de Vida</p>
+        <a href="#" class="apply-btn">Candidatar-se</a>
+      </div>
+      <div class="job-listing">
+        <h3>Desenvolvedor Web Sênior</h3>
+        <p>Salário: R$ 20.000/mês</p>
+        <p>Benefícios: Plano de Saúde, Vale-Transporte, Bônus por Desempenho</p>
+        <a href="site2.html" class="apply-btn">Candidatar-se</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Job Finder. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
